@@ -1,0 +1,15 @@
+{
+  "name": "locomoment",
+  "bsc-flags": ["-bs-no-version-header", "-bs-super-errors"],
+  "reason": {
+    "react-jsx": 2
+  },
+  "bs-dependencies": ["bs-react-native", "reason-react"],
+  "refmt": 3,
+  "sources": [
+    {
+      "dir": "re",
+      "subdirs": true
+    }
+  ]
+}
