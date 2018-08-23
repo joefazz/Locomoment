@@ -4,7 +4,7 @@
   "reason": {
     "react-jsx": 2
   },
-  "bs-dependencies": ["bs-react-native", "reason-react"],
+  "bs-dependencies": ["bs-react-native", "reason-react", "reason-expo"],
   "refmt": 3,
   "sources": [
     {

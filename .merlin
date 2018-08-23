@@ -9,6 +9,8 @@ S /home/joefazzino/locomoment/node_modules/bs-react-native/lib/ocaml
 B /home/joefazzino/locomoment/node_modules/bs-react-native/lib/ocaml
 S /home/joefazzino/locomoment/node_modules/reason-react/lib/ocaml
 B /home/joefazzino/locomoment/node_modules/reason-react/lib/ocaml
+S /home/joefazzino/locomoment/node_modules/reason-expo/lib/ocaml
+B /home/joefazzino/locomoment/node_modules/reason-expo/lib/ocaml
 S re
 B lib/bs/re
 ####BSB GENERATED: NO EDIT}

@@ -5,7 +5,7 @@ bsdep = /home/joefazzino/locomoment/node_modules/bs-platform/lib/bsb_helper.exe
 warnings = -w -30-40+6+7+27+32..39+44+45+101
 bsc_flags = -nostdlib -I '/home/joefazzino/locomoment/node_modules/bs-platform/lib/ocaml' -bs-no-version-header -bs-super-errors -color always
 ppx_flags = 
-bs_package_includes = -I /home/joefazzino/locomoment/node_modules/bs-react-native/lib/ocaml -I /home/joefazzino/locomoment/node_modules/reason-react/lib/ocaml
+bs_package_includes = -I /home/joefazzino/locomoment/node_modules/bs-react-native/lib/ocaml -I /home/joefazzino/locomoment/node_modules/reason-react/lib/ocaml -I /home/joefazzino/locomoment/node_modules/reason-expo/lib/ocaml
 bs_package_dev_includes = 
 namespace = 
 bsb_dir_group = 0
@@ -28,4 +28,9 @@ rule build_cmj_cmi
 build re/App.cmj |  $src_root_dir/lib/js/re/App.js re/App.cmi : build_cmj_cmi re/App.mlast
   bsc_flags = $bsc_flags -bs-re-out -bs-super-errors
   bs_package_flags = $bs_package_flags  -bs-package-output commonjs:lib/js/re
-build build.ninja : phony  ||  re/App.mlast.d
+build re/ListItem.mlast : build_ast_and_module_sets_from_re $src_root_dir/re/ListItem.re
+build re/ListItem.mlast.d : build_deps re/ListItem.mlast
+build re/ListItem.cmj |  $src_root_dir/lib/js/re/ListItem.js re/ListItem.cmi : build_cmj_cmi re/ListItem.mlast
+  bsc_flags = $bsc_flags -bs-re-out -bs-super-errors
+  bs_package_flags = $bs_package_flags  -bs-package-output commonjs:lib/js/re
+build build.ninja : phony  ||  re/ListItem.mlast.d re/App.mlast.d
